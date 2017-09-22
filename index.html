@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT Tickets</title>
+  <script src="xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+  html{height: 100%;}
+  body{
+    height: 100%;
+    color: #49c3d9;
+    background-color: #1d1e1e;
+  }
+  table tbody{
+    color: white;
+  }
+  .title{
+    padding: .3em;
+    height: 6%;
+    overflow-y:auto;
+  }
+  .back-gray{
+    background-color: #303030;
+  }
+  .list-status{
+    padding:3px;
+    border-radius:5px;
+  }
+  .div-table{
+    padding:1em;
+  }
+  .div-printer{
+    height: 40%;
+    overflow-y:auto;
+  }
+  .div-lenovo{
+    height: 54%;
+    overflow-y:auto;
+  }
+  </style>
+</head>
+<body>
+    <div class="back-gray text-center title">
+      <h1>IT Tickets Management</h1>
+    </div>
+    <div class="row div-printer">
+      <div class="col-md-2">
+
+        <div class="row text-center">
+          <div class="col-md-12">
+            <div class="card back-gray mb-3" style="max-width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Expired</h4>
+                <h4 id="card1" class="card-text">1</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card back-gray mb-3" style="max-width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Open</h4>
+                <h4 id="card2" class="card-text">2</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card back-gray mb-3" style="max-width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Closed</h4>
+                <h4 id="card3" class="card-text">3</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" back-gray col-md-10">
+
+        <div class="container back-gray div-table">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Equipamento</th>
+                <th>Tecnico</th>
+                <th>Data Abertura</th>
+                <th>Data Fechamento</th>
+                <th>SLA</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyids">
+              <tr>
+                <th scope="row">1</th>
+                <td>HP LaserJet P4015 (SLEF_2E) - HP</td>
+                <td>Alex Longaray</td>
+                <td>08/07/2017</td>
+                <td>01/09/2017</td>
+                <td>15/07/2017</td>
+                <td style="padding:3px;border-radius:5px;" class="bg-success"><span >Resolvido</span></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>HP LaserJet M5035 MFP - HP</td>
+                <td>Alex Longaray</td>
+                <td>08/07/2017</td>
+                <td>01/09/2017</td>
+                <td>15/07/2017</td>
+                <td class="bg-warning list-status"><span >Dentro do prazo</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>HP LaserJet M5035 MFP - HP</td>
+                <td>Alex Longaray</td>
+                <td>08/07/2017</td>
+                <td>01/09/2017</td>
+                <td>15/07/2017</td>
+                <td class="bg-danger list-status"><span >Contatar HP</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>HP LaserJet M5035 MFP - HP</td>
+                <td>Alex Longaray</td>
+                <td>08/07/2017</td>
+                <td>01/09/2017</td>
+                <td>15/07/2017</td>
+                <td class="bg-danger list-status"><span >Contatar HP</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>HP LaserJet M5035 MFP - HP</td>
+                <td>Alex Longaray</td>
+                <td>08/07/2017</td>
+                <td>01/09/2017</td>
+                <td>15/07/2017</td>
+                <td class="bg-danger list-status"><span >Contatar HP</span></td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <div class="row div-lenovo">
+    <div class="col-md-2">
+
+              <div class="row text-center">
+                <div class="col-md-12">
+                  <div class="card back-gray mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">Expired</h4>
+                      <h4 id="card1" class="card-text">1</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card back-gray mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">Open</h4>
+                      <h4 id="card2" class="card-text">2</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card back-gray mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h4 class="card-title">Closed</h4>
+                      <h4 id="card3" class="card-text">3</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" back-gray col-md-10">
+
+              <div class="container back-gray div-table">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Equipamento</th>
+                      <th>Tecnico</th>
+                      <th>Data Abertura</th>
+                      <th>Data Fechamento</th>
+                      <th>SLA</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyids">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>HP LaserJet P4015 (SLEF_2E) - HP</td>
+                      <td>Alex Longaray</td>
+                      <td>08/07/2017</td>
+                      <td>01/09/2017</td>
+                      <td>15/07/2017</td>
+                      <td style="padding:3px;border-radius:5px;" class="bg-success"><span >Resolvido</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>HP LaserJet M5035 MFP - HP</td>
+                      <td>Alex Longaray</td>
+                      <td>08/07/2017</td>
+                      <td>01/09/2017</td>
+                      <td>15/07/2017</td>
+                      <td class="bg-warning list-status"><span >Dentro do prazo</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>HP LaserJet M5035 MFP - HP</td>
+                      <td>Alex Longaray</td>
+                      <td>08/07/2017</td>
+                      <td>01/09/2017</td>
+                      <td>15/07/2017</td>
+                      <td class="bg-danger list-status"><span >Contatar HP</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>HP LaserJet M5035 MFP - HP</td>
+                      <td>Alex Longaray</td>
+                      <td>08/07/2017</td>
+                      <td>01/09/2017</td>
+                      <td>15/07/2017</td>
+                      <td class="bg-danger list-status"><span >Contatar HP</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>HP LaserJet M5035 MFP - HP</td>
+                      <td>Alex Longaray</td>
+                      <td>08/07/2017</td>
+                      <td>01/09/2017</td>
+                      <td>15/07/2017</td>
+                      <td class="bg-danger list-status"><span >Contatar HP</span></td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script>
+  /* set up XMLHttpRequest */
+  var url = "Printers Management.xls";
+  var oReq = new XMLHttpRequest();
+  var workbook;
+  oReq.open("GET", url, true);
+  oReq.responseType = "arraybuffer";
+  oReq.onload = getData;
+
+  function getData(e) {
+    var arraybuffer = oReq.response;
+
+    /* convert data to binary string */
+    var data = new Uint8Array(arraybuffer);
+    var arr = new Array();
+    for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    var bstr = arr.join("");
+
+    /* Call XLSX */
+    workbook = XLSX.read(bstr, {type:"binary"});
+
+    /* DO SOMETHING WITH workbook HERE */
+    //updateData();
+
+  }
+
+  function updateData(){
+    var sheet_name = workbook.SheetNames[6];
+    var worksheet = workbook.Sheets[sheet_name];
+    var jsonObject = (XLSX.utils.sheet_to_json(worksheet));
+
+    $("#card1").html(jsonObject[0]['Contatar HP']);
+    $("#card2").html(jsonObject[0]['Dentro do Prazo']);
+    $("#card3").html(jsonObject[0]['Resolvido']);
+
+    sheet_name = workbook.SheetNames[7];
+    worksheet = workbook.Sheets[sheet_name];
+    jsonObject = (XLSX.utils.sheet_to_json(worksheet));
+    $('#tbodyid').empty();
+    let class_status = '';
+    for(let i=0; i<jsonObject.length; i++){
+      console.log(jsonObject[i]['Situacao']);
+
+      if(jsonObject[i]['Situacao'] === 'Resolvido'){
+        class_status = 'bg-success';
+      }else if (jsonObject[i]['Situacao'] === 'Dentro do Prazo') {
+        class_status = 'bg-warning';
+      }else if (jsonObject[i]['Situacao'] === 'Contatar HP') {
+        class_status = 'bg-danger';
+      }
+
+      $('#tbodyid').append($('<tr>')
+                   .append($('<th>').attr('scope','row').text(jsonObject[i]['Cod']))
+                   .append($('<td>').text(jsonObject[i]['Equipamento']))
+                   .append($('<td>').text(jsonObject[i]['Tecnico']))
+                   .append($('<td>').text(jsonObject[i]['Data_Abertura']))
+                   .append($('<td>').text(jsonObject[i]['Data_Fechamento']))
+                   .append($('<td>').text(jsonObject[i]['SLA']))
+                   .append($('<td>').addClass(class_status).addClass('list-status').text(jsonObject[i]['Situacao']))
+                 )
+    }
+  }
+
+  oReq.send();
+  </script>
+
+</html>
