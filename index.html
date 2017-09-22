@@ -212,7 +212,7 @@
   }
 
   function updateData(){
-
+console.log('oi');
     sheet_name = workbook.SheetNames[7];
     worksheet = workbook.Sheets[sheet_name];
     jsonObject = (XLSX.utils.sheet_to_json(worksheet));
@@ -286,6 +286,9 @@
   }
 
   oReq.send();
+
+  setInterval(updateData, 10000);
+
   </script>
 
 </html>
