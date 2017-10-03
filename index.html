@@ -85,19 +85,21 @@
           <table class="table table-sm">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Equipamento</th>
-                <th>Tecnico</th>
-                <th>Data Abertura</th>
-                <th>Data Fechamento</th>
-                <th>SLA</th>
-                <th>Status</th>
+                <th width="3%">#</th>
+                <th width="24%">Equipamento</th>
+                <th width="10%">Ticket #</th>
+                <th width="13%">Tecnico</th>
+                <th width="12.5%">Data Abertura</th>
+                <th width="12.5%">Data Fechamento</th>
+                <th width="12.5%">SLA</th>
+                <th width="12.5%">Status</th>
               </tr>
             </thead>
             <tbody id="printer-tbodyid">
               <!--<tr>
                 <th scope="row">2</th>
                 <td>HP LaserJet M5035 MFP - HP</td>
+                <td>dasdsa</td>
                 <td>Alex Longaray</td>
                 <td>08/07/2017</td>
                 <td>01/09/2017</td>
@@ -147,14 +149,14 @@
                 <table class="table table-sm">
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>User</th>
-                      <th>Ticket #</th>
-                      <th>Where</th>
-                      <th>Data Abertura</th>
-                      <th>Data Fechamento</th>
-                      <th>SLA</th>
-                      <th>Status</th>
+                      <th width="3%">#</th>
+                      <th width="24%">User</th>
+                      <th width="10%">Ticket #</th>
+                      <th width="13%">Where</th>
+                      <th width="12.5%">Data Abertura</th>
+                      <th width="12.5%">Data Fechamento</th>
+                      <th width="12.5%">SLA</th>
+                      <th width="12.5%">Status</th>
                     </tr>
                   </thead>
                   <tbody id="lenovo-tbodyid">
@@ -227,6 +229,7 @@
       $('#printer-tbodyid').append($('<tr>')
                    .append($('<th>').attr('scope','row').text(jsonObject.length - i))
                    .append($('<td>').text(jsonObject[i]['Equipamento']))
+                   .append($('<td>').text('soon'))
                    .append($('<td>').text(jsonObject[i]['Tecnico']))
                    .append($('<td>').text(jsonObject[i]['Data_Abertura']))
                    .append($('<td>').text(jsonObject[i]['Data_Fechamento']))
